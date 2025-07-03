@@ -3,13 +3,13 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Cadastro do Usuário</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
 <body>
-    <h2>Cadastro do Usuário</h2>
+    <h2>Registro de Usuário</h2>
     <form method="post" action="{% url 'cad_usuario' %}">
         {% csrf_token %}
         {{form}}

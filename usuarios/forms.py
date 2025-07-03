@@ -6,12 +6,12 @@ class RegisterForm(forms.ModelForm):
         model = Usuarios
         fields = '__all__'
 
-class CarroForm():
+class CarroForm(forms.ModelForm):
     class Meta:
         model = Carros
         fields = '__all__'
 
-class EstacionamentoForm():
+class EstacionamentoForm(forms.ModelForm):
     class Meta:
         model = Estacionamentos
         fields = '__all__'

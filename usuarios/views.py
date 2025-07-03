@@ -28,11 +28,11 @@ def view_cad_carro(request):
 
 def view_cad_estacionamento(request):
     if request.method == 'POST':
-        form = EstacionamentoForm(request.POST) # Nome do form corrigido
+        form = EstacionamentoForm(request.POST) 
         form = RegisterForm(post)
         form.save()
         
     else:
-        form = EstacionamentoForm() # Nome do form corrigido
+        form = EstacionamentoForm() 
 
     return render(request, 'cadestacionamento.html', {'form': form})
