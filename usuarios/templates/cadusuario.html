@@ -10,6 +10,11 @@
 </head>
 <body>
     <h2>Cadastro do Usuário</h2>
-    {{form}}
+    <form method="post" action="{% url 'cad_usuario' %}">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Salvar</button>
+    </form>
+    
 </body>
 </html>
