@@ -11,10 +11,29 @@
 <body>
     <h2>Registro de Usuário</h2>
     <form method="post" action="{% url 'cad_usuario' %}">
-        {% csrf_token %}
-        {{form}}
-        <button type="submit">Salvar</button>
-    </form>
+    {% csrf_token %}
+
+    {% for field in form %}
+        <label for="{{ field.id_for_label }}">{{ field.label }}:</label>
+        {{ field }}<br>
+
+        {% if field.help_text %}
+            <div style="color: green;">{{ field.help_text }}</div>
+        {% endif %}
+
+        {% if field.erros %}
+            <div style="color: red;">{{ field.erros }}</div>
+        {% endif %}
+
+    {% endfor %}
+
+    {% comment %}
+    {{ form }}
+    {% endcomment %}
+
+    <button type="submit">Salvar</button>
+</form>
+
     
 </body>
 </html>

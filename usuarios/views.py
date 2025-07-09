@@ -8,7 +8,7 @@ def view_cad_usuario(request):
     if request.POST:
         post = request.POST
         form = RegisterForm(post)
-        form.save()
+        #form.save()
     else:
         form = RegisterForm()
 
